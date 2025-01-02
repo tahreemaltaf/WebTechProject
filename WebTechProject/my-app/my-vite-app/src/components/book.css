@@ -1,0 +1,92 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Books Section Styling */
+  .books-section-container {
+    margin-top: 20px; /* Ensure space below the Hero Section */
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%; /* Ensure it takes up the full width */
+  }
+  
+  /* Book Cards Container */
+  .book-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  /* Book Box Styling */
+  .book-box {
+    width: 250px; /* Book box size */
+    height: 350px; /* Book box height */
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .book-box:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Book Image */
+  .book-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  /* Book Information Styling */
+  .book-info {
+    padding: 10px;
+  }
+  
+  .book-info h3 {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .book-info p {
+    font-size: 16px;
+    color: #777;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .book-container {
+      flex-direction: column;
+    }
+  
+    .book-box {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Tablet Responsiveness */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .book-box {
+      width: 45%;
+    }
+  }
+  

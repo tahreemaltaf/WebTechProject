@@ -1,0 +1,122 @@
+.book-section-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: url('/src/assets/background.jpg') no-repeat center center/cover;
+    width: 100%;
+    min-height: 100%; /* Adjusted to ensure proper layout on smaller screens */
+  }
+  
+  .book-section-overlay {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .book-section-header {
+    margin-bottom: 20px;
+  }
+  
+  .main-heading {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  .sub-heading {
+    font-size: 1.5rem;
+    margin: 10px 0 20px;
+    color: #ddd;
+  }
+  
+  .books-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Ensures 4 boxes per row */
+    gap: 30px; /* Adds spacing between boxes */
+    justify-items: center; /* Centers grid items horizontally */
+    align-items: stretch; /* Ensures equal height for items */
+    width: 100%;
+  }
+  
+  .book-box {
+    background-color: #d2b48c;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 400px; /* Increased box width */
+    height: 400px; /* Increased box height */
+  }
+  
+  .book-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .book-image {
+    width: 100%;
+    height: 200px; /* Sets a fixed height for uniformity */
+    object-fit: cover;
+  }
+  
+  .book-info {
+    padding: 15px;
+    flex-grow: 1; /* Ensures the text section grows evenly */
+  }
+  
+  .book-info h3 {
+    font-size: 1.25rem;
+    margin: 0 0 10px;
+  }
+  
+  .book-info p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+  }
+  
+  @media (max-width: 1024px) {
+    .books-grid {
+      grid-template-columns: repeat(3, 1fr); /* 3 boxes per row for medium screens */
+      gap: 25px; /* Reduces gap for smaller screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .main-heading {
+      font-size: 2rem;
+    }
+  
+    .sub-heading {
+      font-size: 1.25rem;
+    }
+  
+    .books-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 boxes per row for small screens */
+      gap: 20px;
+    }
+  
+    .book-info h3 {
+      font-size: 1rem;
+    }
+  
+    .book-info p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .books-grid {
+      grid-template-columns: repeat(1, 1fr); /* 1 box per row for extra-small screens */
+      gap: 15px;
+    }
+  }
+  
